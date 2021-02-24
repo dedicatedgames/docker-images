@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 
 # Setup the steam user
-ARG PUID=1000
+ARG PUID=9999
 ENV USER steam
 ENV HOMEDIR "/home/${USER}"
 ENV STEAMCMDDIR "${HOMEDIR}/steamcmd"
