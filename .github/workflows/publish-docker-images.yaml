@@ -28,11 +28,12 @@ jobs:
           context: base-images/steamcmd
           push: true
           tags: dedicatedgames/steamcmd:latest
-      -
-        name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: dedicatedgames/steamcmd
-          readme-filepath: base-images/steamcmd/README.md
+      # This is currently not supported using access tokens, see: https://github.com/docker/roadmap/issues/115
+      # -
+      #   name: Docker Hub Description
+      #   uses: peter-evans/dockerhub-description@v2
+      #   with:
+      #     username: ${{ secrets.DOCKERHUB_USERNAME }}
+      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
+      #     repository: dedicatedgames/steamcmd
+      #     readme-filepath: base-images/steamcmd/README.md
