@@ -5,8 +5,7 @@ ARG PUID=9999
 ENV USER steam
 ENV HOMEDIR "/home/${USER}"
 ENV STEAMCMDDIR "${HOMEDIR}/steamcmd"
-RUN set -x \
-    && useradd -u "${PUID}" -m "${USER}"
+RUN useradd -u "${PUID}" -m "${USER}"
 
 # Install the steamcmd package
 RUN sed -i 's/$/ contrib non-free/' /etc/apt/sources.list \
