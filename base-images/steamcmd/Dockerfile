@@ -15,11 +15,14 @@ RUN sed -i 's/$/ contrib non-free/' /etc/apt/sources.list \
     && echo steam steam/license note '' | debconf-set-selections \
 	&& apt-get install -y --no-install-recommends --no-install-suggests \
         libcurl4-gnutls-dev:i386 \
+		locales \
         ca-certificates \
         libsdl2-2.0-0:i386 \
 		lib32gcc1 \
         steamcmd \
 		tini \
+	&& sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
+	&& dpkg-reconfigure --frontend=noninteractive locales \
 	&& apt-get clean autoclean \
 	&& apt-get autoremove -y \
 	&& rm -rf /var/lib/apt/lists/*
