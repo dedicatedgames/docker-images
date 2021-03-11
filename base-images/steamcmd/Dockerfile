@@ -19,6 +19,7 @@ RUN sed -i 's/$/ contrib non-free/' /etc/apt/sources.list \
         libsdl2-2.0-0:i386 \
 		lib32gcc1 \
         steamcmd \
+		tini \
 	&& apt-get clean autoclean \
 	&& apt-get autoremove -y \
 	&& rm -rf /var/lib/apt/lists/*
