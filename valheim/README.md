@@ -1,5 +1,9 @@
 # Valheim Docker Image
 
+[![Nightly Docker Image](https://github.com/dedicatedgames/docker-images/actions/workflows/publish-docker-images.yaml/badge.svg?event=schedule)](https://github.com/dedicatedgames/docker-images/actions/workflows/publish-docker-images.yaml) ![Docker Pulls](https://img.shields.io/docker/pulls/dedicatedgames/valheim) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/dedicatedgames/valheim)
+
+[Dockerfile](https://github.com/dedicatedgames/docker-images/blob/master/valheim/Dockerfile)
+
 ## Description
 
 Dockerized [Valheim](https://www.valheimgame.com/) Dedicated Server
