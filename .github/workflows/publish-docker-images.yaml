@@ -28,6 +28,14 @@ jobs:
           context: base-images/steamcmd
           push: true
           tags: dedicatedgames/steamcmd:latest
+      -
+        name: Build and push valheim
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          context: valheim
+          push: true
+          tags: dedicatedgames/valheim:latest
       # This is currently not supported using access tokens, see: https://github.com/docker/roadmap/issues/115
       # -
       #   name: Docker Hub Description
