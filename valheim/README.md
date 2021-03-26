@@ -59,15 +59,16 @@ Overrides the default save path where Worlds and permission-files are stored.
 
 ### Example usage
 
-The docker image runs as the `steam` user with a `uid` of `9999`
+The docker image runs as the `steam` user with a `uid` of `9999`. If you choose to mount a volume make sure that the uid of `9999` has access to read and write.
 
 ```
 docker run \
 --name valheim \
--p 2456 \
--p 2457 \
--e SERVER_PASSWORD=changeme
+-p 2456/udp \
+-p 2457/udp \
+-e SERVER_PASSWORD=changeme \
 -e SERVER_NAME=MyValheimServer \
 -e SERVER_WORLD=MyWorld \
+-v ~/valheim_data:/home/steam/valheim/data \
 dedicatedgames/valheim
 ```

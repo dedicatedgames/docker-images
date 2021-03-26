@@ -25,9 +25,7 @@ VOLUME ${SAVE_DATA_DIR}
 # RUN cp /home/steam/steamcmd/linux64/steamclient.so /home/steam/valheim/server/
 
 EXPOSE 2456/udp
-EXPOSE 2456/tcp
 EXPOSE 2457/udp
-EXPOSE 2457/tcp
 
 COPY --chown=steam:steam entrypoint.sh /home/steam/
 ENTRYPOINT ["tini", "--", "/home/steam/entrypoint.sh" ]
