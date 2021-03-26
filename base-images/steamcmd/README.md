@@ -6,7 +6,7 @@
 
 ## Description
 
-"The Steam Console Client or SteamCMD is a command-line version of the Steam client. Its primary use is to install and update various dedicated servers available on Steam using a command-line interface. It works with games that use the SteamPipe content system. All games have been migrated from the deprecated HLDSUpdateTool to SteamCMD." Source: [Steam Console Client](https://developer.valvesoftware.com/wiki/SteamCMD) 
+"The Steam Console Client or SteamCMD is a command-line version of the Steam client. Its primary use is to install and update various dedicated servers available on Steam using a command-line interface. It works with games that use the SteamPipe content system. All games have been migrated from the deprecated HLDSUpdateTool to SteamCMD." Source: [Steam Console Client](https://developer.valvesoftware.com/wiki/SteamCMD)
 
 The docker image gets built nightly, and as part of the build dowwnloads the latest updates for steamcmd.
 
